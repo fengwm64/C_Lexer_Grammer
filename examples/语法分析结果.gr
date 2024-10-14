@@ -1,0 +1,1811 @@
+符号栈:<函数定义> # 
+输入栈:type id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数定义>-><修饰词闭包><类型><变量>(<参数声明>){<函数块>}
+
+符号栈:<修饰词闭包> <类型> <变量> ( <参数声明> ) { <函数块> } # 
+输入栈:type id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<修饰词闭包>->$
+
+符号栈:<类型> <变量> ( <参数声明> ) { <函数块> } # 
+输入栈:type id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<类型>->type<取地址>
+
+符号栈:type <取地址> <变量> ( <参数声明> ) { <函数块> } # 
+输入栈:type id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<取地址> <变量> ( <参数声明> ) { <函数块> } # 
+输入栈:id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<取地址>-><星号闭包>
+
+符号栈:<星号闭包> <变量> ( <参数声明> ) { <函数块> } # 
+输入栈:id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<星号闭包>->$
+
+符号栈:<变量> ( <参数声明> ) { <函数块> } # 
+输入栈:id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> ( <参数声明> ) { <函数块> } # 
+输入栈:id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> ( <参数声明> ) { <函数块> } # 
+输入栈:id ( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> ( <参数声明> ) { <函数块> } # 
+输入栈:( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:( <参数声明> ) { <函数块> } # 
+输入栈:( ) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<参数声明> ) { <函数块> } # 
+输入栈:) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<参数声明>->$
+
+符号栈:) { <函数块> } # 
+输入栈:) { type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:{ <函数块> } # 
+输入栈:{ type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<函数块> } # 
+输入栈:type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块>-><声明语句闭包><函数块闭包>
+
+符号栈:<声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>-><声明语句><声明语句闭包>
+
+符号栈:<声明语句> <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句>-><声明>;
+
+符号栈:<声明> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明>-><修饰词闭包><类型><变量><赋初值>
+
+符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<修饰词闭包>->$
+
+符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<类型>->type<取地址>
+
+符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<取地址>-><星号闭包>
+
+符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<星号闭包>->$
+
+符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:= digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:= digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋初值>->=<右值>
+
+符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:= digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <声明语句闭包> <函数块闭包> } # 
+输入栈:; type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>-><声明语句><声明语句闭包>
+
+符号栈:<声明语句> <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句>-><声明>;
+
+符号栈:<声明> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明>-><修饰词闭包><类型><变量><赋初值>
+
+符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<修饰词闭包>->$
+
+符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<类型>->type<取地址>
+
+符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<取地址>-><星号闭包>
+
+符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<星号闭包>->$
+
+符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id = digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:= digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:= digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋初值>->=<右值>
+
+符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:= digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <声明语句闭包> <函数块闭包> } # 
+输入栈:; type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<声明语句闭包> <函数块闭包> } # 
+输入栈:type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>-><声明语句><声明语句闭包>
+
+符号栈:<声明语句> <声明语句闭包> <函数块闭包> } # 
+输入栈:type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句>-><声明>;
+
+符号栈:<声明> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明>-><修饰词闭包><类型><变量><赋初值>
+
+符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<修饰词闭包>->$
+
+符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<类型>->type<取地址>
+
+符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:type id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<取地址>-><星号闭包>
+
+符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<星号闭包>->$
+
+符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:id [ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:[ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->[<因式>]
+
+符号栈:[ <因式> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:[ digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit ] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:] = { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:= { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋初值>->=<右值>
+
+符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:= { digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <声明语句闭包> <函数块闭包> } # 
+输入栈:{ digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>->{<多个数据>}
+
+符号栈:{ <多个数据> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:{ digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<多个数据> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<多个数据>-><数字><数字闭包>
+
+符号栈:<数字> <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit , digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:, digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字闭包>->,<数字><数字闭包>
+
+符号栈:, <数字> <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:, digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数字> <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit , digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:, digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字闭包>->,<数字><数字闭包>
+
+符号栈:, <数字> <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:, digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数字> <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit , digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:, digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字闭包>->,<数字><数字闭包>
+
+符号栈:, <数字> <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:, digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数字> <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:digit } ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数字闭包> } ; <声明语句闭包> <函数块闭包> } # 
+输入栈:} ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字闭包>->$
+
+符号栈:} ; <声明语句闭包> <函数块闭包> } # 
+输入栈:} ; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:; <声明语句闭包> <函数块闭包> } # 
+输入栈:; for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<声明语句闭包> <函数块闭包> } # 
+输入栈:for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>->$
+
+符号栈:<函数块闭包> } # 
+输入栈:for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块闭包>-><for循环><函数块闭包>
+
+符号栈:<for循环> <函数块闭包> } # 
+输入栈:for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<for循环>->for(<赋值函数><逻辑表达式>;<后缀表达式>){<函数块>}
+
+符号栈:for ( <赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:for ( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:( <赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:( id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋值函数>-><变量><赋值或函数调用>
+
+符号栈:<变量> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id = digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:= digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:= digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋值或函数调用>->=<右值>;
+
+符号栈:= <右值> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:= digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:; id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑表达式>-><表达式><逻辑运算符><表达式>
+
+符号栈:<表达式> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id < digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:< digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:< digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:< digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:<逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:< digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑运算符>-><
+
+符号栈:< <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:< digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:digit ; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:; id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<后缀表达式> ) { <函数块> } <函数块闭包> } # 
+输入栈:id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<后缀表达式>-><变量><后缀运算符>
+
+符号栈:<变量> <后缀运算符> ) { <函数块> } <函数块闭包> } # 
+输入栈:id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } # 
+输入栈:id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } # 
+输入栈:id ++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } # 
+输入栈:++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<后缀运算符> ) { <函数块> } <函数块闭包> } # 
+输入栈:++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<后缀运算符>->++
+
+符号栈:++ ) { <函数块> } <函数块闭包> } # 
+输入栈:++ ) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:) { <函数块> } <函数块闭包> } # 
+输入栈:) { type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:{ <函数块> } <函数块闭包> } # 
+输入栈:{ type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<函数块> } <函数块闭包> } # 
+输入栈:type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块>-><声明语句闭包><函数块闭包>
+
+符号栈:<声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>-><声明语句><声明语句闭包>
+
+符号栈:<声明语句> <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句>-><声明>;
+
+符号栈:<声明> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明>-><修饰词闭包><类型><变量><赋初值>
+
+符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<修饰词闭包>->$
+
+符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<类型>->type<取地址>
+
+符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<取地址>-><星号闭包>
+
+符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<星号闭包>->$
+
+符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:= digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:= digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋初值>->=<右值>
+
+符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:= digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:; for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>->$
+
+符号栈:<函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块闭包>-><for循环><函数块闭包>
+
+符号栈:<for循环> <函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<for循环>->for(<赋值函数><逻辑表达式>;<后缀表达式>){<函数块>}
+
+符号栈:for ( <赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:( <赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:( id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋值函数>-><变量><赋值或函数调用>
+
+符号栈:<变量> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋值或函数调用>->=<右值>;
+
+符号栈:= <右值> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->+<因子><项>
+
+符号栈:+ <因子> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因子> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑表达式>-><表达式><逻辑运算符><表达式>
+
+符号栈:<表达式> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:<逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑运算符>-><
+
+符号栈:< <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<后缀表达式> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<后缀表达式>-><变量><后缀运算符>
+
+符号栈:<变量> <后缀运算符> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id -- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:-- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<后缀运算符> ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:-- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<后缀运算符>->--
+
+符号栈:-- ) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:-- ) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:) { <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:) { if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:{ <函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:{ if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<函数块> } <函数块闭包> } <函数块闭包> } # 
+输入栈:if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块>-><声明语句闭包><函数块闭包>
+
+符号栈:<声明语句闭包> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>->$
+
+符号栈:<函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块闭包>-><条件语句><函数块闭包>
+
+符号栈:<条件语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<条件语句>->if(<逻辑表达式>){<函数块>}<否则语句>
+
+符号栈:if ( <逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:if ( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:( <逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:( id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑表达式>-><表达式><逻辑运算符><表达式>
+
+符号栈:<表达式> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id == digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:== digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:== digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:== digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:<逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:== digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑运算符>->==
+
+符号栈:== <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:== digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:) { type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:{ <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:{ type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<函数块> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块>-><声明语句闭包><函数块闭包>
+
+符号栈:<声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>-><声明语句><声明语句闭包>
+
+符号栈:<声明语句> <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句>-><声明>;
+
+符号栈:<声明> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明>-><修饰词闭包><类型><变量><赋初值>
+
+符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<修饰词闭包>->$
+
+符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<类型>->type<取地址>
+
+符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<取地址>-><星号闭包>
+
+符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<星号闭包>->$
+
+符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:= id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:= id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋初值>->=<右值>
+
+符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:= id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:; } } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:} } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>->$
+
+符号栈:<函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:} } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块闭包>->$
+
+符号栈:} <否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:} } if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<否则语句> <函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:} if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<否则语句>->$
+
+符号栈:<函数块闭包> } <函数块闭包> } <函数块闭包> } # 
+输入栈:} if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块闭包>->$
+
+符号栈:} <函数块闭包> } <函数块闭包> } # 
+输入栈:} if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<函数块闭包> } <函数块闭包> } # 
+输入栈:if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块闭包>-><条件语句><函数块闭包>
+
+符号栈:<条件语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<条件语句>->if(<逻辑表达式>){<函数块>}<否则语句>
+
+符号栈:if ( <逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:if ( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:( <逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:( id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑表达式>-><表达式><逻辑运算符><表达式>
+
+符号栈:<表达式> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id > digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:> digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:> digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:> digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:<逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:> digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑运算符>->>
+
+符号栈:> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:> digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<表达式> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:) { <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:) { for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:{ <函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:{ for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<函数块> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块>-><声明语句闭包><函数块闭包>
+
+符号栈:<声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>->$
+
+符号栈:<函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块闭包>-><for循环><函数块闭包>
+
+符号栈:<for循环> <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<for循环>->for(<赋值函数><逻辑表达式>;<后缀表达式>){<函数块>}
+
+符号栈:for ( <赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:for ( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:( <赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:( id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋值函数>-><变量><赋值或函数调用>
+
+符号栈:<变量> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋值或函数调用>->=<右值>;
+
+符号栈:= <右值> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->+<因子><项>
+
+符号栈:+ <因子> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因子> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑表达式>-><表达式><逻辑运算符><表达式>
+
+符号栈:<表达式> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id < digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:<逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<逻辑运算符>-><
+
+符号栈:< <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:< digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<后缀表达式>-><变量><后缀运算符>
+
+符号栈:<变量> <后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id -- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:-- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:-- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<后缀运算符>->--
+
+符号栈:-- ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:-- ) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:) { type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:{ <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:{ type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<函数块> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<函数块>-><声明语句闭包><函数块闭包>
+
+符号栈:<声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>-><声明语句><声明语句闭包>
+
+符号栈:<声明语句> <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句>-><声明>;
+
+符号栈:<声明> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<声明>-><修饰词闭包><类型><变量><赋初值>
+
+符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<修饰词闭包>->$
+
+符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<类型>->type<取地址>
+
+符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<取地址>-><星号闭包>
+
+符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<星号闭包>->$
+
+符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<赋初值>->=<右值>
+
+符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; type id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id ; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; type id = id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; type id = id + digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; type id = id + digit ; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句闭包>-><声明语句><声明语句闭包>
+
+符号栈:<声明语句> <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id + digit ; } } } return digit ; } # 
+推出式:<声明语句>-><声明>;
+
+符号栈:<声明> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id + digit ; } } } return digit ; } # 
+推出式:<声明>-><修饰词闭包><类型><变量><赋初值>
+
+符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id + digit ; } } } return digit ; } # 
+推出式:<修饰词闭包>->$
+
+符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id + digit ; } } } return digit ; } # 
+推出式:<类型>->type<取地址>
+
+符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:type id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; } } } return digit ; } # 
+推出式:<取地址>-><星号闭包>
+
+符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; } } } return digit ; } # 
+推出式:<星号闭包>->$
+
+符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id = id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; } } } return digit ; } # 
+推出式:<赋初值>->=<右值>
+
+符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:= id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<右值> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; } } } return digit ; } # 
+推出式:<右值>-><表达式>
+
+符号栈:<表达式> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; } } } return digit ; } # 
+推出式:<表达式>-><因子><项>
+
+符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; } } } return digit ; } # 
+推出式:<因式>-><变量>
+
+符号栈:<变量> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; } } } return digit ; } # 
+推出式:<变量>-><标志符><数组下标>
+
+符号栈:<标志符> <数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; } } } return digit ; } # 
+推出式:<标志符>->id
+
+符号栈:id <数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:id + digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<数组下标> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; } } } return digit ; } # 
+推出式:<数组下标>->$
+
+符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; } } } return digit ; } # 
+推出式:<项>->+<因子><项>
+
+符号栈:+ <因子> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:+ digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; } } } return digit ; } # 
+推出式:<因子>-><因式><因式递归>
+
+符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; } } } return digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; } } } return digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit <因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:digit ; } } } return digit ; } # 
+匹配!
+
+符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; } } } return digit ; } # 
+推出式:<因式递归>->$
+
+符号栈:<项> ; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; } } } return digit ; } # 
+推出式:<项>->$
+
+符号栈:; <声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:; } } } return digit ; } # 
+匹配!
+
+符号栈:<声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:} } } return digit ; } # 
+推出式:<声明语句闭包>->$
+
+符号栈:<函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:} } } return digit ; } # 
+推出式:<函数块闭包>->$
+
+符号栈:} <函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:} } } return digit ; } # 
+匹配!
+
+符号栈:<函数块闭包> } <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:} } return digit ; } # 
+推出式:<函数块闭包>->$
+
+符号栈:} <否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:} } return digit ; } # 
+匹配!
+
+符号栈:<否则语句> <函数块闭包> } <函数块闭包> } # 
+输入栈:} return digit ; } # 
+推出式:<否则语句>->$
+
+符号栈:<函数块闭包> } <函数块闭包> } # 
+输入栈:} return digit ; } # 
+推出式:<函数块闭包>->$
+
+符号栈:} <函数块闭包> } # 
+输入栈:} return digit ; } # 
+匹配!
+
+符号栈:<函数块闭包> } # 
+输入栈:return digit ; } # 
+推出式:<函数块闭包>-><函数返回><函数块闭包>
+
+符号栈:<函数返回> <函数块闭包> } # 
+输入栈:return digit ; } # 
+推出式:<函数返回>->return<因式>;
+
+符号栈:return <因式> ; <函数块闭包> } # 
+输入栈:return digit ; } # 
+匹配!
+
+符号栈:<因式> ; <函数块闭包> } # 
+输入栈:digit ; } # 
+推出式:<因式>-><数字>
+
+符号栈:<数字> ; <函数块闭包> } # 
+输入栈:digit ; } # 
+推出式:<数字>->digit
+
+符号栈:digit ; <函数块闭包> } # 
+输入栈:digit ; } # 
+匹配!
+
+符号栈:; <函数块闭包> } # 
+输入栈:; } # 
+匹配!
+
+符号栈:<函数块闭包> } # 
+输入栈:} # 
+推出式:<函数块闭包>->$
+
+符号栈:} # 
+输入栈:} # 
+匹配!
+
+符号栈:# 
+输入栈:# 
+成功!
